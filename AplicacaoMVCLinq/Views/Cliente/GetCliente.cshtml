@@ -3,29 +3,31 @@
     ViewData["Title"] = "Clientes";
 }
 <h1> Listar clientes</h1>
+<div class="container table-responsive">
 
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <td>Telefone</td>
-            <th>Data nascimento</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var cliente in Model)
-        {
+    <table class="table table-striped table-hover">
+        <thead>
             <tr>
-
-                <td>@cliente.Id</td>
-                <td>@cliente.Nome</td>
-                <td>@cliente.Email</td>
-                <td>@cliente.Telefone</td>
-                <td>@cliente.DataNasc</td>
-
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <td>Telefone</td>
+                <th>Data nascimento</th>
             </tr>
-        }
-    </tbody>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
 
+                    <td>@cliente.Id</td>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Telefone</td>
+                    <td>@cliente.DataNasc</td>
+
+                </tr>
+            }
+        </tbody>
+
+</div>
